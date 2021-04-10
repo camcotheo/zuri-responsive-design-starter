@@ -26,6 +26,7 @@ ul.nav-links {
     padding: 0;
 }
 
+
 ul li {
     margin: 0 2vw;
     list-style: none;
@@ -43,6 +44,46 @@ ul li a:hover {
     background: #fff;
     padding: 0.5rem;
 }
+
+
+
+/* This is for mobile */
+@media screen and (max-width: 768px) {
+
+    div.nav-bar {
+        display: flex;
+        background: #304353;
+        padding: 1rem 2rem;
+    }
+    
+       
+    ul.nav-links {
+        display:none; 
+        height:auto;
+        margin:0px;
+    }    
+    .show {
+        display: none;
+    }
+    .hide:target + .show {
+        display: inline; 
+    }
+    .hide:target {
+        display: none;
+    }
+    .hide:target ~ .nav-links {
+        display:inline; 
+    }
+    
+    /*style the (+) and (-) */
+    .hide, .show {
+        font-size: 30px;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+    }   
+}
+
 
 div.hero-section {
     background: #304353;
@@ -87,6 +128,48 @@ div.hero-content-btn a {
     letter-spacing: 2px;
 }
 
+@media screen and (max-width: 768px) {
+    
+    
+div.hero-section {
+    background: #304353;
+    padding: 2rem;
+}
+
+div.hero-content-heading {
+    text-align: left;
+}
+
+div.hero-content-heading h3 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 200;
+    color: #bcc3c7;
+}
+
+div.hero-content-heading p {
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+div.hero-content-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+div.hero-content-btn a {
+    background: #E44C65;
+    text-decoration: none;
+    color: #bcc3c7;
+    font-size: 0.7rem;
+    padding: 4px 16px;
+    border-radius: 3px;
+    letter-spacing: 2px;
+}
+}
+
 div.hero-background {
     background: #f0f0f0;
     padding: 10rem;
@@ -95,12 +178,11 @@ div.hero-background {
     align-items: center;
 }
 
+/* Removed the sizes completely to allow for flexibility. */
 div.background {
     background: #fff;
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
     padding: 15px 40px;
-    width: 550px;
-    height: 220px;
     position: relative;
 }
 
@@ -128,6 +210,33 @@ div.hero-background-pos {
     height: 140px;
     border-radius: 50%;
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
+}
+
+@media screen and (max-width: 1400px) {
+    
+div.hero-background {
+        display: flex;
+        padding: 1rem 2rem;
+        align-items: center; 
+    }
+
+    div.background h4 {
+    color: #555657;
+    font-size: 1rem;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+div.background p {
+    color: #A6A5AA;
+    padding: 0px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+div.hero-background-pos {
+    display: none;
+}
 }
 
 div.snapshot-team {
@@ -161,6 +270,7 @@ div.snapshot-box {
 div.snapshot-box-content {
     display: flex;
     justify-content: space-between;
+    
 }
 
 div.box1 {
@@ -208,6 +318,25 @@ div.box1 h5 {
     font-size: 1rem;
 }
 
+@media screen and (max-width: 769px) {
+    div.snapshot-team {
+        padding: 2rem 3rem;
+    }
+
+/* made use of flex wrap instead of directions so the  
+    box can wrap according to screen size*/
+     
+    div.snapshot-box {
+        padding: 1rem 2rem;
+    }
+    
+    div.snapshot-box-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
 div.gallery-section {
     background: #fff;
     padding: 4rem;
@@ -245,6 +374,20 @@ div.img {
 div.img img {
     width: 250px;
     height: 180px;
+}
+
+@media screen and (max-width: 768px) {
+    div.gallery-section {
+        padding: 2rem;
+    }
+    
+    div.gallery-content h4 {
+        font-size: 1.4rem;
+    }
+
+    div.gallery-img {
+       padding-top: 1rem;
+    }
 }
 
 div.footer {
@@ -344,4 +487,46 @@ div.footer h6 {
     color: #88949B;
     font-size: 1rem;
     padding-top: 6rem;
+}
+@media screen and (max-width: 768px) {
+    div.footer {
+        padding: 2rem;
+    }
+    div.footer-input {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    input[type="text"] {
+        width: 71%;
+    }
+    
+    input[type="email"] {
+        width: 71%;
+    }
+    
+    
+    div.footer-textarea {
+        padding-top: 1rem;
+        margin-right: 10px;
+        padding: 10px 20px;
+    }
+    
+    textarea {
+        width: 77%;
+        height: 150px;
+       
+    }
+    
+    div.footer-btn {
+        padding-top: 1rem;
+    }
+    
+    div.footer h6 {
+        text-align: center;
+        color: #88949B;
+        font-size: 1rem;
+        padding-top: 2rem;
+    }
+    
 }
